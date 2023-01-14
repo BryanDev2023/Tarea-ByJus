@@ -33,6 +33,9 @@ function setup() {
   
   score = 0  
   redB= new Group();
+  pinkB = new Group();
+  blueB = new Group();
+  greenB = new Group();
   arrowGroup= new Group();
 }
 
@@ -41,7 +44,7 @@ function draw() {
      background(255);
 
       scene.velocityX = -3 
-      bow.destroy();
+      //bow.destroy();
       if (scene.x < 0){
         scene.x = scene.width/2;
       }
@@ -55,6 +58,17 @@ function draw() {
     createArrow();  
   }
   
+  if (redB.isTouching(bow) || 
+      greenB.isTouching(bow) ||
+      blueB.isTouching(bow) ||
+      pinkB.isTouching(bow)) {
+    redB.destroyEach();
+    blueB.destroyEach();
+    greenB.destroyEach();
+    pinkB.destroyEach();
+    gameState=END; 
+  }
+
   //crear enemigos continuos
   var select_balloon = Math.round(random(1,4));
   
@@ -84,14 +98,8 @@ function draw() {
       }
 
       bow.y = World.mouseY      
-
       scene.velocityX = 0;
 
-  }
-
-  if (frameCount>1000) {
-    red.destroyEach();
-    gameState=END; 
   }
 
   drawSprites();
@@ -113,6 +121,7 @@ function blueBalloon() {
   blue.velocityX = 3;
   blue.lifetime = 150;
   blue.scale = 0.1;
+  blueB.add(blue);
 }
 
 function greenBalloon() {
@@ -121,6 +130,7 @@ function greenBalloon() {
   green.velocityX = 3;
   green.lifetime = 150;
   green.scale = 0.1;
+  greenB.add(green);
 }
 
 function pinkBalloon() {
@@ -129,6 +139,7 @@ function pinkBalloon() {
   pink.velocityX = 3;
   pink.lifetime = 150;
   pink.scale = 1
+  pinkB.add(pink);
 }
 
 // Crear flechas para el arco

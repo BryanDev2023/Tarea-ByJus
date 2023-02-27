@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+     <script src="p5.play.js"></script>
+
+     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+     <script>
+          import { initializeApp } from "firebase/app";
+
+          const firebaseConfig = {
+            apiKey: "AIzaSyBfry1ncHooI0BtiEpFbTtAOZUFJHWjU18",
+            authDomain: "pruebaenclase-91abb.firebaseapp.com",
+            projectId: "pruebaenclase-91abb",
+            storageBucket: "pruebaenclase-91abb.appspot.com",
+            messagingSenderId: "207808232350",
+            appId: "1:207808232350:web:760c10df80f3cb9da0f48f"
+          };
+
+          const app = initializeApp(firebaseConfig);
+     </script>
+
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <script src="sketch.js"></script>
+</body>
+</html>

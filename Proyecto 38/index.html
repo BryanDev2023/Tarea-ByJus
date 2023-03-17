@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Juego MiQuiz</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <script src="p5.play.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+  <!-- TODO: Agregar SDKs para los productos Firebase que quieras usar
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBfry1ncHooI0BtiEpFbTtAOZUFJHWjU18",
+      authDomain: "pruebaenclase-91abb.firebaseapp.com",
+      databaseURL: "https://pruebaenclase-91abb-default-rtdb.firebaseio.com",
+      projectId: "pruebaenclase-91abb",
+      storageBucket: "pruebaenclase-91abb.appspot.com",
+      messagingSenderId: "207808232350",
+      appId: "1:207808232350:web:760c10df80f3cb9da0f48f"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+  <script src="js/Contestant.js"></script>
+  <script src="js/Question.js"></script>
+  <script src="js/Quiz.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+    <script src="sketch.js"></script>
+</body>
+</html>

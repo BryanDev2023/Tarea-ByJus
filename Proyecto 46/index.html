@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="libraries/p5.js"></script>
+  <script src="libraries/p5.dom.min.js"></script>
+  <script src="libraries/p5.play.js"></script>
+
+  <script src="js/form.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/player.js"></script>
+
+  <!-- El núcleo JS SDK de Firebase siempre es requerido y debe ser enlistado primero -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+  <!-- TODO: Agregar SDKs para los productos Firebase que quieras usar
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDZbGsYCNJZzoHU850BT6ZnmYs3673D8gc",
+      authDomain: "atrapa-frutas-83520.firebaseapp.com",
+      databaseURL: "https://atrapa-frutas-83520-default-rtdb.firebaseio.com",
+      projectId: "atrapa-frutas-83520",
+      storageBucket: "atrapa-frutas-83520.appspot.com",
+      messagingSenderId: "804135198636",
+      appId: "1:804135198636:web:844c986ceb0f400111a409"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+  
+  
+ 
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego atrapar frutas</title>
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+</body>
+</html>
